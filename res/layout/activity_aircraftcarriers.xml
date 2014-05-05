@@ -1,0 +1,433 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            tools:context=".Aircraftcarriers" >
+
+            <TextView
+                android:id="@+id/txt_Aircraftcarriername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/aircraftcarriername" />
+
+            <TextView
+                android:id="@+id/txt_Aircraftcarriersdata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/aircraftcarriersdata" />
+
+            <ImageView
+                android:id="@+id/imagedetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                android:src="@drawable/aircraftcarriers240"
+                android:visibility="visible"
+                android:contentDescription="@string/aircraftcarrier" />
+            <EditText
+                android:id="@+id/txt_carriersearch"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" 
+                android:hint="@string/searchhint" />
+            <EditText
+                android:id="@+id/txt_carriersearchtwo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" 
+                android:hint="@string/searchhint" />
+            <EditText
+                android:id="@+id/txt_carriersearchthree"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" 
+                android:hint="@string/searchhint" />            
+            <Button
+                android:id="@+id/btn_searchforcarriers"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickSearch"
+                android:text="@string/searchforcarriers" />
+            
+            <Button
+                android:id="@+id/btn_Location"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickCarrier"
+                android:text="@string/aircraftcarriersbutton" />
+
+            <TextView
+                android:id="@+id/txt_summarytitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/summarytitle" />
+                        <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <TableRow>
+            <Button
+                android:id="@+id/btn_Summary"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickSummary"
+                android:text="@string/summarybutton" />
+            <Button
+                android:id="@+id/btn_Summaryclass"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickSummaryClass"
+                android:text="@string/summarybyclassbutton" />
+            <Button
+                android:id="@+id/btn_Summaryservice"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickSummaryService"
+                android:text="@string/summarybyservicebutton" />
+                </TableRow>
+
+                <TableRow>
+            <Button
+                android:id="@+id/btn_Summarypennant"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickSummaryPennant"
+                android:text="@string/summarybypennantbutton" />
+            
+            <Button
+                android:id="@+id/btn_Summarytype"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickSummaryType"
+                android:text="@string/summarybytypebutton" />
+            <Button
+                android:id="@+id/btn_Summaryserviceperiod"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickSummaryServiceperiod"
+                android:text="@string/summarybyserviceperiodbutton" />
+                </TableRow>
+</TableLayout>
+            <Button
+                android:id="@+id/btn_Pictures"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickPictures"
+                android:text="@string/picturesbutton" />            
+            <Button
+                android:id="@+id/btn_Navy"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickNavy"
+                android:text="@string/navy" />
+            <Button
+                android:id="@+id/btn_Info"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickInfo"
+                android:text="@string/infobutton" />
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <TableRow>
+
+                    <ImageView
+                        android:id="@+id/brazilian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/brazilian"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/btn_Brazilian"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="onClickCarrierBrazilian"
+                        android:text="@string/brazilian"
+                        android:visibility="invisible" />
+                </TableRow>
+
+                <TableRow>
+
+                    <ImageView
+                        android:id="@+id/argentine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/argentine"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/btn_argentine"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="onClickCarrierArgentine"
+                        android:text="@string/argentine"
+                        android:visibility="invisible" />
+                </TableRow>
+
+                <TableRow>
+
+                    <ImageView
+                        android:id="@+id/french"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/french"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/btn_french"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="onClickCarrierFrench"
+                        android:text="@string/french"
+                        android:visibility="invisible" />
+                </TableRow>
+
+                <TableRow>
+
+                    <ImageView
+                        android:id="@+id/indian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/indian"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/btn_indian"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="onClickCarrierIndian"
+                        android:text="@string/indian"
+                        android:visibility="invisible" />
+                </TableRow>
+
+                <TableRow>
+
+                    <ImageView
+                        android:id="@+id/japanese"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/japanese"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/btn_japanese"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="onClickCarrierJapanese"
+                        android:text="@string/japanese"
+                        android:visibility="invisible" />
+                </TableRow>
+
+                <TableRow>
+
+                    <ImageView
+                        android:id="@+id/koninklijke"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/koninklijke"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/btn_koninklijke"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="onClickCarrierKoninklijke"
+                        android:text="@string/koninklijke"
+                        android:visibility="invisible" />
+                </TableRow>
+
+                <TableRow>
+
+                    <ImageView
+                        android:id="@+id/kriegsmarine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/kriegsmarine"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/btn_kriegsmarine"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="onClickCarrierKriegsmarine"
+                        android:text="@string/kriegsmarine"
+                        android:visibility="invisible" />
+                </TableRow>
+
+                <TableRow>
+
+                    <ImageView
+                        android:id="@+id/marinamilitare"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/marinamilitare"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/btn_marinamilitare"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="onClickCarrierMarinaMilitare"
+                        android:text="@string/marinamilitare"
+                        android:visibility="invisible" />
+                </TableRow>
+
+                <TableRow>
+
+                    <ImageView
+                        android:id="@+id/pla"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/pla"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/btn_pla"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="onClickCarrierPLA"
+                        android:text="@string/pla"
+                        android:visibility="invisible" />
+                </TableRow>
+
+                <TableRow>
+
+                    <ImageView
+                        android:id="@+id/thai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/thai"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/btn_thai"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="onClickCarrierThai"
+                        android:text="@string/thai"
+                        android:visibility="invisible" />
+                </TableRow>
+
+                <TableRow>
+
+                    <ImageView
+                        android:id="@+id/russian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/russian"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/btn_russian"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="onClickCarrierRussian"
+                        android:text="@string/russian"
+                        android:visibility="invisible" />
+                </TableRow>
+
+                <TableRow>
+
+                    <ImageView
+                        android:id="@+id/spanish"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/spanish"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/btn_spanish"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="onClickCarrierSpanish"
+                        android:text="@string/spanish"
+                        android:visibility="invisible" />
+                </TableRow>
+
+                <TableRow>
+
+                    <ImageView
+                        android:id="@+id/swedish"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/swedish"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/btn_swedish"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="onClickCarrierSwedish"
+                        android:text="@string/swedish"
+                        android:visibility="invisible" />
+                </TableRow>
+
+                <TableRow>
+
+                    <ImageView
+                        android:id="@+id/uk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/uk"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/btn_uk"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="onClickCarrierUk"
+                        android:text="@string/uk"
+                        android:visibility="invisible" />
+                </TableRow>
+
+                <TableRow>
+
+                    <ImageView
+                        android:id="@+id/us"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/us"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/btn_us"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="onClickCarrierUs"
+                        android:text="@string/us"
+                        android:visibility="invisible" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
